@@ -3,6 +3,7 @@ plugins {
     id("com.gradleup.shadow") version "8.3.1"
 }
 
+
 application {
 
     mainClass.set("com.example.discordbot.main.Launcher")
@@ -30,4 +31,9 @@ tasks.withType<JavaCompile> {
     // Set this to the version of java you want to use,
     // the minimum required for JDA is 1.8
     sourceCompatibility = "1.8"
+}
+tasks.named<com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar>("shadowJar") {
+    manifest {
+        attributes(mapOf("Main-Class" to "com.example.discordbot.main.Launcher"))
+    }
 }
