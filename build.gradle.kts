@@ -4,8 +4,10 @@ plugins {
 }
 
 application {
-    mainClass = "com.example.discordbot.main.Launcher"
+
+    mainClass.set("com.example.discordbot.main.Launcher")
 }
+
 group = "org.example"
 version = "1.0"
 
