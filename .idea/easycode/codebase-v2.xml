@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="com.obiscr.chatgpt.settings.EasyCodeState">
+    <option name="projectFiles" value="$PROJECT_DIR$/com/example/discordbot/events/MessageListener.java;F:/Yazilim/RevetisBot/RevetisDiscordBot/com/example/discordbot/events/ReadyListener.java;F:/Yazilim/RevetisBot/RevetisDiscordBot/com/example/discordbot/main/Launcher.java;F:/Yazilim/RevetisBot/RevetisDiscordBot/com/example/discordbot/main/Settings.java;F:/Yazilim/RevetisBot/RevetisDiscordBot/build.gradle.kts;F:/Yazilim/RevetisBot/RevetisDiscordBot/settings.gradle.kts" />
+  </component>
+</project>

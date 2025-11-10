@@ -3,7 +3,9 @@ plugins {
     id("com.gradleup.shadow") version "8.3.1"
 }
 
-application.mainClass = "com.example.discordbot.Bot" //
+application {
+    mainClass = "com.example.discordbot.main.Launcher"
+}
 group = "org.example"
 version = "1.0"
 
@@ -15,6 +17,8 @@ repositories {
 
 dependencies {
     implementation("net.dv8tion:JDA:$jdaVersion")
+    implementation("ch.qos.logback:logback-classic:1.5.13")
+    implementation("io.github.cdimascio:java-dotenv:5.2.2")
 }
 
 tasks.withType<JavaCompile> {
