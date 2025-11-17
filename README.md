@@ -1,107 +1,42 @@
-Revetis Discord Bot
+<!-- Banner: değiştirmek için URL'yi değiştir -->
+[![banner](https://raw.githubusercontent.com/<kullanici>/<repo>/main/assets/banner.png)](https://github.com/<kullanici>/<repo>)
 
-Java 20 ve JDA kullanılarak geliştirilmiş modern ve modüler Discord botu. Güçlü moderasyon araçları, log sistemi ve özelleştirilebilir sunucu ayarları sunar.
+# Revetis Discord Bot
 
-🇹🇷 Türkçe
-Özellikler
+Java 20 · Gradle · JDA
 
-Java 20 + JDA ile hızlı ve kararlı yapı
+---
 
-Slash komut desteği
+![Java](https://img.shields.io/badge/Java-20-informational?logo=java&style=flat)
+![Gradle](https://img.shields.io/badge/Gradle-Installed-success?logo=gradle&style=flat)
+![JDA](https://img.shields.io/badge/JDA-Enabled-blue?style=flat)
 
-Moderasyon komutları (ban, kick, timeout…)
+## Hızlı Bakış
+- **Platform:** Java 20, Gradle  
+- **Kütüphane:** JDA  
+- **Özellikler:** Moderasyon, Slash komutları, Log sistemi, Çoklu dil
 
-Log sistemi
+---
 
-Sunucuya özel ayarlar
-
-Çoklu dil desteği
-
-Gereksinimler
-
-Java 20
-
-Gradle
-
-Discord Bot Token
-
-Kurulum
-1. Depoyu klonla
-git clone <repo-url>
-cd RevetisDiscordBot
-
-2. config.json oluştur
-
-src/main/resources/config.json içine:
-
+## Kurulum (kısa)
+1. `git clone <repo-url>`  
+2. `cd RevetisDiscordBot`  
+3. `src/main/resources/config.json` oluştur:
+```json
 {
-  "token": "BOT_TOKEN",
-  "defaultLanguage": "en",
-  "logChannel": "LOG_CHANNEL_ID"
+  "token":"BOT_TOKEN",
+  "defaultLanguage":"tr",
+  "logChannel":"LOG_CHANNEL_ID"
 }
-
-3. Çalıştır
 gradle build
+
 java -jar build/libs/RevetisDiscordBot.jar
 
 Komutlar
+/ban — kullanıcıyı yasaklar
 
-/ban — Kullanıcıyı yasaklar
+/kick — kullanıcıyı atar
 
-/kick — Kullanıcıyı atar
+/language — sunucu dilini ayarlar
 
-/language — Sunucu dilini ayarlar
-
-/settings — Sunucu ayarlarını yönetir
-
-🇬🇧 English
-Features
-
-Fast and stable structure with Java 20 + JDA
-
-Slash command support
-
-Moderation tools (ban, kick, timeout…)
-
-Logging system
-
-Guild-specific settings
-
-Multi-language support
-
-Requirements
-
-Java 20
-
-Gradle
-
-Discord Bot Token
-
-Setup
-1. Clone the repository
-git clone <repo-url>
-cd RevetisDiscordBot
-
-2. Create config.json
-
-Place this inside src/main/resources/config.json:
-
-{
-  "token": "BOT_TOKEN",
-  "defaultLanguage": "en",
-  "logChannel": "LOG_CHANNEL_ID"
-}
-
-3. Run
-gradle build
-java -jar build/libs/RevetisDiscordBot.jar
-
-Commands
-
-/ban — bans a member
-
-/kick — kicks a member
-
-/language — changes server language
-
-/settings — server configuration panel
+/settings — sunucu ayar paneli
