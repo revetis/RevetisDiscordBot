@@ -1,11 +1,13 @@
 package com.example.discordbot.db;
 
+import com.example.discordbot.main.Settings;
+
 import java.sql.*;
 
 public class DatabaseManager {
-    private static final String URL = "jdbc:mysql://127.0.0.1:3306/revetisbot?allowPublicKeyRetrieval=true&useSSL=false";
-    private static final String USER = "root";
-    private static final String PASSWORD = "StrongPassword123!";
+    private static final String URL = Settings.dbURL;
+    private static final String USER = Settings.dbUser;
+    private static final String PASSWORD = Settings.dbPass;
 
     private static Connection connection;
 
