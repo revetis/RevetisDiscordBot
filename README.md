@@ -1,42 +1,119 @@
-<!-- Banner: değiştirmek için URL'yi değiştir -->
-[![banner](https://raw.githubusercontent.com/<kullanici>/<repo>/main/assets/banner.png)](https://github.com/<kullanici>/<repo>)
+Revetis Discord Bot
 
-# Revetis Discord Bot
+Java 20 ve JDA kullanılarak geliştirilmiş, modüler, ölçeklenebilir ve çoklu dil destekli Discord botu.
 
-Java 20 · Gradle · JDA
+Genel Özellikler
 
----
+Java 20 tabanlı yüksek performanslı mimari
 
-![Java](https://img.shields.io/badge/Java-20-informational?logo=java&style=flat)
-![Gradle](https://img.shields.io/badge/Gradle-Installed-success?logo=gradle&style=flat)
-![JDA](https://img.shields.io/badge/JDA-Enabled-blue?style=flat)
+JDA ile stabil Discord API iletişimi
 
-## Hızlı Bakış
-- **Platform:** Java 20, Gradle  
-- **Kütüphane:** JDA  
-- **Özellikler:** Moderasyon, Slash komutları, Log sistemi, Çoklu dil
+Slash komut sistemi
 
----
+Moderasyon araçları (ban, kick, timeout)
 
-## Kurulum (kısa)
-1. `git clone <repo-url>`  
-2. `cd RevetisDiscordBot`  
-3. `src/main/resources/config.json` oluştur:
-```json
+Loglama ve guild bazlı ayarlar
+
+Çoklu dil sistemi (Türkçe / İngilizce)
+
+Gradle ile kolay kurulum ve dağıtım
+
+Proje Yapısı
+RevetisDiscordBot/
+ ├── src/
+ │   └── main/
+ │       ├── java/                # Botun tüm kaynak kodları
+ │       ├── resources/           # config ve dil dosyaları
+ │       │    ├── config.json
+ │       │    └── languages/
+ │       └── ...
+ ├── build.gradle
+ ├── settings.gradle
+ └── README.md
+
+Kurulum
+1. Depoyu klonlayın
+git clone <repo-url>
+cd RevetisDiscordBot
+
+2. config.json oluşturun
+
+src/main/resources/config.json içine:
+
 {
-  "token":"BOT_TOKEN",
-  "defaultLanguage":"tr",
-  "logChannel":"LOG_CHANNEL_ID"
+  "token": "BOT_TOKEN",
+  "defaultLanguage": "en",
+  "logChannel": "LOG_CHANNEL_ID"
 }
-gradle build
 
+3. Build / Çalıştırma
+gradle build
 java -jar build/libs/RevetisDiscordBot.jar
 
 Komutlar
-/ban — kullanıcıyı yasaklar
+Komut	Açıklama	English Description
+/ban	Üyeyi yasaklar	Bans a member
+/kick	Üyeyi atar	Kicks a member
+/timeout	Zamana dayalı susturma verir	Applies timeout to a member
+/language	Dil ayarı	Changes server language
+/settings	Sunucu ayar paneli	Server configuration panel
+Yükleme & Çalıştırma Notları
 
-/kick — kullanıcıyı atar
+Java 20 gerektirir.
 
-/language — sunucu dilini ayarlar
+Gradle wrapper ile ek yapılandırma gerektirmez.
 
-/settings — sunucu ayar paneli
+JDA güncel sürüm ile uyumludur.
+
+Dil dosyaları resources/languages klasöründen otomatik yüklenir.
+
+Guild bazlı ayarlar hafızada tutulur veya istenirse dosya/veritabanına taşınabilir.
+
+Uluslararası (English) Bölümü
+Overview
+
+Revetis Discord Bot is a modular and scalable bot built with Java 20 and JDA.
+It provides a clean command system, moderation tools, guild-specific settings and multi-language support.
+
+Requirements
+
+Java 20
+
+Gradle
+
+Discord Bot Token
+
+Setup
+git clone <repo-url>
+cd RevetisDiscordBot
+
+
+Create config.json:
+
+{
+  "token": "BOT_TOKEN",
+  "defaultLanguage": "en",
+  "logChannel": "LOG_CHANNEL_ID"
+}
+
+
+Build & Run:
+
+gradle build
+java -jar build/libs/RevetisDiscordBot.jar
+
+Geliştirme Notları
+
+Komutlar arayüz tabanlıdır ve yeni komut eklemek oldukça kolaydır.
+
+JDA event sistemi ile entegre çalışır.
+
+Gerektiğinde veritabanı desteği eklenebilir.
+
+Loglama sistemi genişletilebilir yapıdadır (moderasyon, kullanıcı hareketi, hata kayıtları).
+
+Çoklu dil sistemi anahtar tabanlıdır ve yeni dil eklemek için yalnızca JSON dosyası eklemek yeterlidir.
+
+Lisans
+
+Bu proje özgürce geliştirilebilir, değiştirilebilir ve dağıtılabilir.
