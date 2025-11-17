@@ -22,6 +22,7 @@ dependencies {
     implementation("net.dv8tion:JDA:$jdaVersion")
     implementation("ch.qos.logback:logback-classic:1.5.13")
     implementation("io.github.cdimascio:java-dotenv:5.2.2")
+    implementation("mysql:mysql-connector-java:8.0.33")
 }
 
 tasks.withType<JavaCompile> {

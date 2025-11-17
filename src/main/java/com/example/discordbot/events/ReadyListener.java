@@ -2,6 +2,7 @@ package com.example.discordbot.events;
 
 import com.example.discordbot.commands.interfaces.Command;
 import com.example.discordbot.commands.managers.CommandManager;
+import com.example.discordbot.db.DatabaseManager;
 import net.dv8tion.jda.api.OnlineStatus;
 import net.dv8tion.jda.api.entities.Activity;
 import net.dv8tion.jda.api.events.session.ReadyEvent;
@@ -28,10 +29,9 @@ public class ReadyListener extends ListenerAdapter {
                 System.out.println(i+" - Komut Yuklenirken hata olustu: " + e);
             }
         }
-        {
 
-            }
+        DatabaseManager.connect();
 
-        }
+    }
     }
 

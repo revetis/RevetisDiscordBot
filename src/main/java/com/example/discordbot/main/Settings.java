@@ -3,7 +3,7 @@ import io.github.cdimascio.dotenv.Dotenv;
 
 public class Settings{
     static Dotenv dotenv = Dotenv.configure()
-            .directory("./")
+            .directory("F:\\Yazilim\\RevetisBot\\RevetisDiscordBot\\")
             .load();
     private static final String token = dotenv.get("TOKEN");
     public static final String name =  dotenv.get("NAME");

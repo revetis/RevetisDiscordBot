@@ -1,18 +1,20 @@
 package com.example.discordbot.events;
 
-import net.dv8tion.jda.api.entities.Guild;
-import net.dv8tion.jda.api.entities.channel.concrete.TextChannel;
 import net.dv8tion.jda.api.events.guild.member.GuildMemberJoinEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
+import com.example.discordbot.utilities.GuildSettings;
 
-import java.util.List;
+import java.util.Objects;
+
 
 public class OnGuildMemberJoin extends ListenerAdapter {
     public void onGuildMemberJoin(GuildMemberJoinEvent event){
-        List<TextChannel> channels = event.getGuild().getTextChannelsByName("incoming-members", true);
-        if (!channels.isEmpty()){
-            TextChannel channel = channels.get(0);
-            channel.sendMessage("Welcome " + event.getMember().getEffectiveName()).queue();
+        Long logChannelId = GuildSettings.getLogChannelId(event.getGuild().getId());
+
+        if (logChannelId == null)return;
+
+        if (event.getGuild().getTextChannelById(logChannelId) != null){
+            Objects.requireNonNull(event.getGuild().getTextChannelById(logChannelId)).sendMessage("Welcome, "+"<@"+event.getUser().getId()+">").queue();
         }
     }
 }
