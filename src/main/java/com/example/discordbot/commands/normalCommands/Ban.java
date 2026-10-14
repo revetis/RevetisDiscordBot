@@ -61,7 +61,7 @@ public class Ban implements Command {
         int finalDeleteDays = deleteDays;
         String finalReason = reason;
 
-        // Artık retrieveMemberById kullanmıyoruz, direkt ID üzerinden ban atıyoruz
+        
         event.getGuild().ban(List.of(UserSnowflake.fromId(finalTargetID)), Duration.ofDays(finalDeleteDays))
                 .reason(finalReason)
                 .queue(
@@ -73,7 +73,7 @@ public class Ban implements Command {
                                     finalReason
                             )).queue();
 
-                            // Log göndermek için SendLog fonksiyonunu çağır
+                            
                             SendLog.sendLog(event,
                                     Messages.get(event.getGuild().getId(), "memberRemovedBan"),
                                     String.valueOf(finalTargetID),
